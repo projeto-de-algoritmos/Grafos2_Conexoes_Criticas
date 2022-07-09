@@ -3,7 +3,7 @@ from typing import List, Tuple
 from critical_connections import CriticalConnections
 from draw_graph import draw_graph
 
-from fastapi import FastAPI
+from fastapi import FastAPI, Response
 from pydantic import BaseModel
 
 app = FastAPI()
@@ -19,15 +19,18 @@ def read_root():
     return {"Hello": "World"}
 
 
-@app.post("/get-graph")
+@app.post("/get-graph",
+    responses = {
+        200: {
+            "content": {"image/png": {}}
+        }
+    },
+    response_class=Response
+)
 def plot_graph(graph: Graph):
-
-    print(graph.edges)
     
     critical_connections = CriticalConnections().get_critical_connections(graph.nodes_number, graph.edges)
-    print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
-    print(critical_connections)
 
-    draw_graph(graph, critical_connections)
+    img_bytes = draw_graph(graph, critical_connections)
 
-    return None
+    return Response(content=img_bytes.read(), media_type="image/png")
