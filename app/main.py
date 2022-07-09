@@ -1,4 +1,7 @@
-from typing import Union, List, Tuple
+from logging import critical
+from typing import List, Tuple
+from critical_connections import CriticalConnections
+from draw_graph import draw_graph
 
 from fastapi import FastAPI
 from pydantic import BaseModel
@@ -17,5 +20,14 @@ def read_root():
 
 
 @app.post("/get-graph")
-def plot_graph():
+def plot_graph(graph: Graph):
 
+    print(graph.edges)
+    
+    critical_connections = CriticalConnections().get_critical_connections(graph.nodes_number, graph.edges)
+    print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+    print(critical_connections)
+
+    draw_graph(graph, critical_connections)
+
+    return None
