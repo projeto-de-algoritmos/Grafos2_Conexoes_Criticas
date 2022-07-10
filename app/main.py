@@ -14,6 +14,15 @@ class Graph(BaseModel):
     edges: List[Tuple[int, int]]
 
 
+def normilize_edges(edges):
+    aux_edges = edges.copy()
+
+    for i in range(len(aux_edges)):
+        edges[i] = tuple(sorted(aux_edges[i]))
+
+    return edges
+
+
 @app.get("/")
 def read_root():
     return {"Hello": "World"}
@@ -28,6 +37,8 @@ def read_root():
     response_class=Response
 )
 def plot_graph(graph: Graph):
+
+    graph.edges = normilize_edges(graph.edges)
     
     critical_connections = CriticalConnections().get_critical_connections(graph.nodes_number, graph.edges)
 

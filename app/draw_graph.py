@@ -23,8 +23,8 @@ def draw_graph(graph, critical_adges):
     colors = nx.get_edge_attributes(G,'color').values()
     weights = nx.get_edge_attributes(G,'weight').values()
 
-    pos = nx.circular_layout(G)
-    nx.draw(G, pos, edge_color=colors, width=list(weights))
+    pos = nx.planar_layout(G)
+    nx.draw(G, pos, edge_color=colors, width=list(weights), with_labels=True)
 
     buf = io.BytesIO()
     plt.savefig(buf, format='png')
