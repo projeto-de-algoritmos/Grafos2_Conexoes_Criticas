@@ -1,3 +1,4 @@
+import base64
 from logging import critical
 from typing import List, Tuple
 from critical_connections import CriticalConnections
@@ -41,14 +42,7 @@ def read_root():
     return {"Hello": "World"}
 
 
-@app.post("/get-graph",
-    responses = {
-        200: {
-            "content": {"image/png": {}}
-        }
-    },
-    response_class=Response
-)
+@app.post("/get-graph")
 def plot_graph(graph: Graph):
 
     graph.edges = normilize_edges(graph.edges)
@@ -57,4 +51,6 @@ def plot_graph(graph: Graph):
 
     img_bytes = draw_graph(graph, critical_connections)
 
-    return Response(content=img_bytes.read(), media_type="image/png")
+    encoded_image_string = base64.b64encode(img_bytes.read())
+
+    return {"image_string": encoded_image_string}
