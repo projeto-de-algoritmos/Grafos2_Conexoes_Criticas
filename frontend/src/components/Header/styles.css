@@ -1,0 +1,28 @@
+.header {
+  width: 100%;
+  height: auto;
+  padding-top: 70px;
+}
+
+.header-logo {
+  width: 200px;
+  height: 200px;
+}
+
+.header-h1 {
+  font-size: 52px;
+  color: #00007e;
+  padding-left: 50px;
+}
+
+.inline-flex {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-p {
+  margin: 0 auto;
+  padding-top: 20px;
+  color: #00007e;
+}
