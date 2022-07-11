@@ -1,6 +1,6 @@
 .board {
   width: 100%;
-  padding-top: 50px;
+  padding-top: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,4 +49,19 @@
   color: white;
   font-size: 18px;
   font-weight: 600;
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+
+.board-button-2 {
+  width: 200px;
+  height: 50px;
+  border-radius: 16px;
+  border: none;
+  background-color: #00007e;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 50px;
+  cursor: pointer;
 }

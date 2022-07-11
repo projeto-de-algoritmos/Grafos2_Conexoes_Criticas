@@ -10,9 +10,18 @@ export default function Header() {
         <h1 className='header-h1'>Conexões críticas <br />em uma rede</h1>
       </div>
       <p className='header-p'>
-        Existem n servidores numerados de 0 a n - 1 conectados por conexões servidor-servidor não direcionadas formando uma rede onde conexões[i] = [ai, bi] representa uma conexão entre servidores ai e bi. Qualquer servidor pode alcançar outros servidores direta ou indiretamente através da rede.
         Uma conexão crítica é uma conexão que, se removida, tornará alguns servidores incapazes de alcançar algum outro servidor.
-        Retorna todas as conexões críticas na rede em qualquer ordem.
+        Retorna todas as conexões críticas na rede em qualquer ordem. Este algorimo é um exemplo de como esta conexão funciona!
+        <br/>
+        <br/>
+        <b>Regras:</b>
+        <br/>
+        <br/>
+        <b>1-</b> Um nó não pode se conectar a ele mesmo.
+        <br/>
+        <b>2-</b> Todo nó tem que se conectar pelo menos uma vez.
+        <br/>
+        <b>3-</b> Insira uma conexão por linha, igual ao exemplo abaixo.
      </p>
   </header>
   );
