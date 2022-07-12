@@ -12,7 +12,7 @@
 
 Uma demonstração das conexões críticas utilizando o algoritmo de busca em profundidade.
 
-Link para o vídeo de apresentação: [Conexões Críticas]()
+Link para o vídeo de apresentação: [Conexões Críticas](https://youtu.be/6gCa1jp-Pjw)
 
 ## Screenshots
 
