@@ -2,8 +2,6 @@
 
 **Conteúdo da Disciplina**: Grafos 2<br>
 
-*preencher*
-
 ## Alunos
 |Matrícula | Aluno |
 | -- | -- |
@@ -12,13 +10,14 @@
 
 ## Sobre 
 
-*preencher*
+Uma demonstração das conexões críticas utilizando o algoritmo de busca em profundidade.
 
-Link para o vídeo de apresentação: [N-Damas](https://www.youtube.com/watch?v=78BMYTWKhWA)
+Link para o vídeo de apresentação: [Conexões Críticas]()
 
 ## Screenshots
 
-*preencher*
+![](././frontend/src/assets/conexao1.png)
+![](././frontend/src/assets/conexao2.png)
 
 ## Instalação 
 **Linguagem**: JavaScript, Python, HTML, CSS <br>
@@ -26,20 +25,23 @@ Link para o vídeo de apresentação: [N-Damas](https://www.youtube.com/watch?v=
 
 ## Instalação 
 
-> Para clonar o projeto digite:
+Para clonar o projeto digite:
 
     git clone https://github.com/projeto-de-algoritmos/Grafos2_Conexoes_Criticas
 
+Depois rode o comando para executar o docker da aplicação:
 
-### Instalando o projeto
+    docker-compose up
 
-**preencher**
+Por fim, acesse a porta do frontend e aproveite:
+
+    http://localhost:3000/
 
 ## Uso 
 
 1. Abra o navegador web de sua escolha e digite a url do projeto;<br>
-2. **preencher**
-3. **preencher**
+2. Selecione a quantidade de nós que deseja
+3. Indique as conexões dos nós e clica no botão para gerar a rede de conexões.
 
 ## Outros 
 Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
