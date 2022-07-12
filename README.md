@@ -10,7 +10,7 @@
 
 ## Sobre 
 
-Uma demonstração das conexões críticas utilizando o algoritmo de busca em profundidade.
+Uma demonstração das conexões críticas, onde o usuário coloca a quantidade de nós que deseja e as conexões definidas. A partir daí pode-se observar onde as conexões são mais frágeis e com risco de ruptura. 
 
 Link para o vídeo de apresentação: [Conexões Críticas](https://youtu.be/6gCa1jp-Pjw)
 
