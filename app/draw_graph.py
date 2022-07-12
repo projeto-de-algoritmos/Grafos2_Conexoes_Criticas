@@ -15,7 +15,7 @@ def draw_graph(graph, critical_adges):
         G.add_node(node)
 
     for edge in graph.edges:
-        if edge in critical_adges:
+        if edge in critical_adges or (edge[1], edge[0]) in critical_adges:
             G.add_edge(edge[0], edge[1], color='r', weight=2)
         else:
             G.add_edge(edge[0], edge[1], color='g', weight=2)
